@@ -16,7 +16,7 @@ ADMIN_USERNAME = "@jdueje"  # Никнейм администратора в Tel
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 
-# Путь к драйверу Chrome
+
 chrome_driver_path = r'/usr/bin/chromedriver'
 
 # Хранение ID обработанных объявлений
