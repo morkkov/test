@@ -9,7 +9,7 @@ import time
 import re
 
 # Telegram bot token
-API_TOKEN = '7759086372:AAEuRB_N-PbN_o-42WtfJT7oa9Cj_2ts3J8'  # Замените на ваш токен от BotFather
+API_TOKEN = '8166286788:AAHziecCZi_W-z7MzwLZOjqJUocyX-mZK5w'  # Замените на ваш токен от BotFather
 
 # Создаем объект бота и диспетчер
 bot = Bot(token=API_TOKEN)
