@@ -9,7 +9,7 @@ import time
 import re
 
 # Telegram bot token
-API_TOKEN = '8166286788:AAHziecCZi_W-z7MzwLZOjqJUocyX-mZK5w'  # Замените на ваш токен от BotFather
+API_TOKEN = '7759086372:AAEuRB_N-PbN_o-42WtfJT7oa9Cj_2ts3J8'  # Замените на ваш токен от BotFather
 ADMIN_USERNAME = "@jdueje"  # Никнейм администратора в Telegram
 
 # Создаем объект бота и диспетчер
@@ -111,11 +111,12 @@ async def start_monitoring(message: types.Message):
     global user_urls
     user_id = message.chat.id
 
-    # Отправляем ID нового пользователя админу
+    # Сохраняем ID нового пользователя в файл
     try:
-        await bot.send_message(chat_id=ADMIN_USERNAME, text=f"Новый пользователь: {user_id}")
+        with open("users.txt", "a") as file:
+            file.write(f"{user_id}\n")
     except Exception as e:
-        print(f"Ошибка отправки сообщения админу: {e}")
+        print(f"Ошибка записи ID пользователя в файл: {e}")
 
     await message.reply("Бот запущен. Отправьте команду /seturl <ссылка>, чтобы установить ссылку для мониторинга.")
 
